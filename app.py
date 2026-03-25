@@ -100,7 +100,7 @@ with st.sidebar:
 
 @st.cache_data
 def load_data():
-    df = pd.read_parquet("AnthonyDjiadyDjie_DS39+_Final_Project_Cleaned.parquet")
+    df = pd.read_parquet("online_retail_cleaned.parquet")
     df['invoicedate'] = pd.to_datetime(df['invoicedate'], errors='coerce')
     df['customer_id'] = df['customer_id'].astype(str)
     if 'total_price' not in df.columns:
